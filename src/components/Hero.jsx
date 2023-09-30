@@ -40,7 +40,7 @@ const Hero = () => {
         >
           <button className='btn-cta'>
             <img
-              src='/public/assets/icons/playstore-btn.svg'
+              src='/assets/icons/playstore-btn.svg'
               alt='Play Store'
               width={132}
               height={36}
@@ -49,7 +49,7 @@ const Hero = () => {
           </button>
           <button className='btn-cta'>
             <img
-              src='/public/assets/icons/appstore-btn.svg'
+              src='/assets/icons/appstore-btn.svg'
               alt='Play Store'
               height={36}
               width={132}
@@ -66,7 +66,7 @@ const Hero = () => {
         viewport={{ once: false, amount: 0.25 }}
       >
         <img
-          src='/public/assets/images/hero/car.svg'
+          src='/assets/images/hero/car.svg'
           alt='Car VW'
           className='max-w-[300px] sm:max-w-[400px] md:max-w-[600px] mx-auto xl:max-w-[700px]'
         />

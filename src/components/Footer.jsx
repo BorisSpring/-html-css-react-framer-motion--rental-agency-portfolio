@@ -1,14 +1,25 @@
 import React from 'react';
 import { FaPhone } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { useMediaQuery } from 'react-responsive';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 
 const Footer = () => {
+  const isDesktopMode = useMediaQuery({ query: '(min-width:1300px)' });
+
   return (
     <footer className='bg-slate-200 pt-5'>
       <div className='flex flex-col lg:flex-row px-5 pb-5 lg:px-10 lg:pb-10 gap-[25px] lg:gap-[50px] container mx-auto '>
-        <div className='flex flex-col gap-2'>
+        <motion.div
+          variants={fadeIn(!isDesktopMode ? 'left' : 'up', 'tween', 1, 0.5)}
+          whileInView='show'
+          initial='hidden'
+          viewport={{ once: false, amount: 0.25 }}
+          className='flex flex-col gap-2'
+        >
           <img
-            src='/public/assets/icons/logo.svg'
+            src='/assets/icons/logo.svg'
             alt='Company Logo'
             className='w-[158px] '
           />
@@ -21,15 +32,29 @@ const Footer = () => {
             <MdEmail className='w-5 h-5 text-accent-default' />
             <span className='font-[600]'>borisdimitrijevicit@gmail.com</span>
           </div>
-        </div>
-        <div className='flex flex-col gap-2  whitespace-nowrap'>
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn(!isDesktopMode ? 'right' : 'down', 'tween', 1, 0.5)}
+          whileInView='show'
+          initial='hidden'
+          viewport={{ once: false, amount: 0.25 }}
+          className='flex flex-col gap-2  whitespace-nowrap'
+        >
           <h2 className='font-[600]'>Company</h2>
           <p>New York</p>
           <p>Carrers</p>
           <p>Mobile</p>
           <p>Blog</p>
-        </div>
-        <div className='flex flex-col gap-2  whitespace-nowrap'>
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn(!isDesktopMode ? 'left' : 'up', 'tween', 1, 0.5)}
+          whileInView='show'
+          initial='hidden'
+          viewport={{ once: false, amount: 0.25 }}
+          className='flex flex-col gap-2  whitespace-nowrap'
+        >
           <h2 className='font-[600]'>Working Hours</h2>
           <p>
             Mon-Fri:{' '}
@@ -42,8 +67,15 @@ const Footer = () => {
           <p>
             Sun: <span className='text-primary font-semibold'>Closed </span>
           </p>
-        </div>
-        <div className='flex flex-col gap-2 max-w-[280px]'>
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn(!isDesktopMode ? 'right' : 'down', 'tween', 1, 0.5)}
+          whileInView='show'
+          initial='hidden'
+          viewport={{ once: false, amount: 0.25 }}
+          className='flex flex-col gap-2 max-w-[280px]'
+        >
           <h2 className='font-[600] '>Newsletter</h2>
           <p className='text-primary'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Your Email
@@ -64,7 +96,7 @@ const Footer = () => {
               Submit
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

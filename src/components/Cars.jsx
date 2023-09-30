@@ -35,7 +35,7 @@ const Cars = () => {
             whileInView='show'
             initial='hidden'
             viewport={{ once: false, amount: 0.25 }}
-            src={`/public/assets/icons/brands/${brand}.svg`}
+            src={`/assets/icons/brands/${brand}.svg`}
             alt={brand}
             className='w-20 xl:w-[150px] object-contain  m-auto '
           />

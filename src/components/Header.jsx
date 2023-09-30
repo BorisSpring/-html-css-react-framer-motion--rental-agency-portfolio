@@ -66,7 +66,7 @@ const Header = () => {
         <div className='flex justify-between  '>
           <Link to='Home' spy={true} activeClass='active'>
             <img
-              src='/public/assets/icons/logo.svg'
+              src='/assets/icons/logo.svg'
               alt='Company Logo'
               width={164}
               height={64}

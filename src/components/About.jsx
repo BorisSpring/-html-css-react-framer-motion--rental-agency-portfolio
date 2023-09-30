@@ -22,7 +22,7 @@ const About = () => {
         viewport={{ once: false, amount: 0.25 }}
       >
         <img
-          src='/public/assets/images/about/car01.png'
+          src='/assets/images/about/car01.png'
           alt='Honda Car CRV 109KS'
           className='max-w-[300px] md:max-w-[400px] lg:max-w-[500px] object-contain'
         />
