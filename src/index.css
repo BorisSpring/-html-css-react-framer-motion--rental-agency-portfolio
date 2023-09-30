@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  color: #ed1d24;
+}
+
+.mobile-nav {
+  transform: translateX(-105%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav2 {
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+}
+
+@layer base {
+  .btn-cta {
+    @apply bg-primary h-[54px] rounded-[5px] px-4 transition-all duration-300;
+  }
+}
